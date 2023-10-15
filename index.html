@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toDoList</title>
+    <title>To-Do List Pure React APP</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- to translate jsx into js -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <!-- hello world -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+        const app = document.getElementById("app");
+
+        function Greeting() {
+            return(
+                <div>
+                    <h1>Hello Timmy!</h1>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<Greeting />, app)
+    </script>
 </body>
 </html>
