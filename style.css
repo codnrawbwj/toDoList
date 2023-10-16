@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+.App {
+    margin: 100px auto auto auto;
+    text-align: center;
+}
+
+.sub-greeting {
+    margin: 50px auto 35px auto;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.input-box button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+li {
+    max-width: 200px;
+    margin: 20px auto auto auto;
+    background-color: beige;
+    list-style-type: none;
+    text-align: left;
+}
+
+li button {
+    margin: 0 30px 0 10px;
+    border: none;
+    background-color: beige;
+    color: red;
+    font-size: 2rem;
+}
