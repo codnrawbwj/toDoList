@@ -1,11 +1,21 @@
-const { useState } = React;
+const { useState, useEffect, useRef } = React;
 
 let nextId = 0;
+
+const preventFirstRun = (func, dep) => {
+    const firstRun = useRef(false);
+
+    useEffect(() => {
+        if (firstRun.current) func();
+        else firstRun.current = true;
+    }, dep)
+}
 
 function App() {
 
     const [newItem, setNewItem] = useState("");
     const [todos, setTodos] = useState([]);
+    const [isDeleted, setIsDeleted] = useState(false);
 
     function addItem() {
         setTodos([...todos,
@@ -18,7 +28,12 @@ function App() {
         setTodos(
             todos.filter(item => item.id !== id)
         );
+        setIsDeleted(isDeleted => !isDeleted);
     }
+
+    preventFirstRun(() => {
+        alert("Deletion completed!")
+    }, [isDeleted])
 
     return(
         <div className="App">
