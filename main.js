@@ -30,7 +30,15 @@ function App() {
             <button 
                 className="input_button"
                 onClick = {() => addItem()} 
-                >Add</button>
+                >Add
+            </button>
+            <ul>
+                {todos.map((todo => {
+                    return (
+                        <li key={todo.id}>{todo.task}</li>
+                    )
+                }))}
+            </ul>
         </div>
     )
 }
