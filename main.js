@@ -14,6 +14,12 @@ function App() {
         console.log(todos)
     }
 
+    function deleteItem(id) {
+        setTodos(
+            todos.filter(item => item.id !== id)
+        );
+    }
+
     return(
         <div className="App">
             <div>
@@ -36,7 +42,10 @@ function App() {
             <ul>
                 {todos.map((todo => {
                     return (
-                        <li key={todo.id}>{todo.task}</li>
+                        <li key={todo.id}>
+                            <button onClick={() => deleteItem(todo.id)}>x</button>
+                            {todo.task}
+                        </li>
                     )
                 }))}
             </ul>

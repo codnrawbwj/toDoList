@@ -26,10 +26,6 @@ h2 {
     height: 50px;
 }
 
-.input-box input {
-    border-radius: 8px;
-}
-
 .input-box button {
     background-color: white;
     border: none;
@@ -41,4 +37,13 @@ li {
     margin: 20px auto auto auto;
     background-color: beige;
     list-style-type: none;
+    text-align: left;
+}
+
+li button {
+    margin: 0 30px 0 10px;
+    border: none;
+    background-color: beige;
+    color: red;
+    font-size: 2rem;
 }
