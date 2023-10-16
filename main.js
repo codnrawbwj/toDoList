@@ -16,22 +16,23 @@ function App() {
 
     return(
         <div className="App">
-            <div className="greeting">
+            <div>
                 <h1>Hello Timmy!</h1>
-                <h2>What is up with you today?</h2>
+                <h2 className="sub-greeting">What's up with you today?</h2>
             </div>
-            <input 
-                type="text" 
-                name="to-dos" 
-                id="todo_input" 
-                placeholder="Enter your to-do!" 
-                onChange = {e => setNewItem(e.target.value)}
-            />
-            <button 
-                className="input_button"
-                onClick = {() => addItem()} 
-                >Add
-            </button>
+            <div className="input-box">
+                <input 
+                    type="text" 
+                    name="to-dos" 
+                    id="todo_input" 
+                    onChange = {e => setNewItem(e.target.value)}
+                />
+                <button 
+                    className="btn btn-success"
+                    onClick = {() => addItem()} 
+                    >Add
+                </button>
+            </div>
             <ul>
                 {todos.map((todo => {
                     return (
