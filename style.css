@@ -35,3 +35,10 @@ h2 {
     border: none;
     cursor: pointer;
 }
+
+li {
+    max-width: 200px;
+    margin: 20px auto auto auto;
+    background-color: beige;
+    list-style-type: none;
+}
